@@ -129,3 +129,7 @@ class GardenManager:
                     if plant.__class__ == "PrizePlant":
                         count += 0
             return count
+
+
+if __name__ == "__main__":
+    pass

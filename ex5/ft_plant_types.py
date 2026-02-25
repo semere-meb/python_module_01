@@ -8,7 +8,7 @@ class Plant:
         self.age = age
 
     def get_info(self):
-        print(f"{self.name} ({self.height}cm, {self.age} days)")
+        print(f"\n{self.name} ({self.height}cm, {self.age} days)")
 
 
 class Flower(Plant):
@@ -18,8 +18,8 @@ class Flower(Plant):
 
     def get_info(self):
         print(
-            f"{self.name} (Flower): {self.height}cm, {self.age} days, \
-            {self.color} color"
+            f"\n{self.name} (Flower): {self.height}cm, {self.age} days, " +
+            f"{self.color} color"
         )
 
     def bloom(self):
@@ -33,14 +33,14 @@ class Tree(Plant):
 
     def get_info(self):
         print(
-            f"{self.name} (Tree): {self.height}cm, {self.age} days, \
-            {self.trunk_diameter}cm diameter"
+            f"\n{self.name} (Tree): {self.height}cm, {self.age} days, " +
+            f"{self.trunk_diameter}cm diameter"
         )
 
     def produce_shade(self):
         print(
-            f"{self.name} provides {self.trunk_diameter} square \
-              meters of shade"
+            f"{self.name} provides {self.trunk_diameter} square " +
+            "meters of shade"
         )
 
 
@@ -59,8 +59,8 @@ class Vegetable(Plant):
 
     def get_info(self):
         print(
-            f"{self.name} (Vegetable): {self.height}cm, {self.age} days, \
-            {self.harvest_season} harvest"
+            f"\n{self.name} (Vegetable): {self.height}cm, {self.age} days," +
+            f" {self.harvest_season} harvest"
         )
 
     def get_nutritional_facts(self):

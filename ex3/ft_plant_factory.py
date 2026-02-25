@@ -20,9 +20,9 @@ class Plant:
 
 if __name__ == "__main__":
     plants: list(Plant) = [
-        Plant("Rose", 25, 30),
-        Plant("Monstera", 70, 120),
-        Plant("Cactus", 25, 30),
+        Plant("Rose", 25, 30, 1),
+        Plant("Monstera", 70, 120, 1.2),
+        Plant("Cactus", 25, 30, 1.5),
     ]
     count = 0
 
