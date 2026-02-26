@@ -88,7 +88,7 @@ class Vegetable(Plant):
 
 
 if __name__ == "__main__":
-    plants = [
+    plants: list = [
         Flower("Rose", 25, 30, "red"),
         Flower("Lavender", 34, 67, "purple"),
         Tree("Oak", 500, 1825, 50),

@@ -128,9 +128,13 @@ class GardenManager:
 
     class GardenStats:
         def print_plant_stats() -> None:
-            types_dict = {'regular': 0, 'flowering': 0, 'prize flowers': 0}
-            total_growth = 0
-            plant_count = 0
+            types_dict: dict = {
+                'regular': 0,
+                'flowering': 0,
+                'prize flowers': 0,
+            }
+            total_growth: int = 0
+            plant_count: int = 0
             for garden in GardenManager.gardens:
                 total_growth += garden.total_growth
                 for type in garden.types_dict:
@@ -141,17 +145,18 @@ class GardenManager:
             print(f"Plant types: {types_dict}")
 
         def print_height_validation() -> None:
-            validation = [g.is_height_valid for g in GardenManager.gardens]
+            validation: list = \
+                [g.is_height_valid for g in GardenManager.gardens]
             print(f"Height validation test: {False not in validation}")
 
         def print_score() -> None:
-            score = {}
+            score: dict = {}
             for garden in GardenManager.gardens:
                 score[garden.owner] = garden.score
             print(f"Garden scores - {score}")
 
         def print_garden_count() -> None:
-            garden_count = 0
+            garden_count: int = 0
             for garden in GardenManager.gardens:
                 garden_count += 1
             print(f"Total gardens managed: {garden_count}")

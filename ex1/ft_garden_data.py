@@ -11,12 +11,12 @@ class Plant:
 
 
 if __name__ == "__main__":
-    plant_info = [
+    plant_info: list = [
         ("Rose", 25, 30),
         ("sunflower", 80, 45),
         ("Cactus", 15, 120),
     ]
-    plants = []
+    plants: list = []
     for info in plant_info:
         plant = Plant()
         plant.name = info[0]

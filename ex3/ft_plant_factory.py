@@ -24,7 +24,7 @@ class Plant:
 
 
 if __name__ == "__main__":
-    plants: list(Plant) = [
+    plants: list = [
         Plant("Rose", 25, 30),
         Plant("Oak", 200, 365),
         Plant("Cactus", 5, 90),
@@ -32,7 +32,7 @@ if __name__ == "__main__":
         Plant("Fern", 15, 120),
     ]
     print("=== Plant Factory Output ==")
-    count = 0
+    count: int = 0
     for plant in plants:
         print("Created: ", end="")
         plant.get_info()
