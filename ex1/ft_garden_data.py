@@ -2,31 +2,27 @@
 
 
 class Plant:
-    name: str = ""
-    height: int = 0
-    age: int = 0
+    name: str
+    height: int
+    age: int
 
-    def get_info(self):
+    def get_info(self) -> None:
         print(f"{self.name}: {self.height}cm, {self.age} days old")
 
 
 if __name__ == "__main__":
-    rose = Plant()
-    rose.name = "Rose"
-    rose.height = 25
-    rose.age = 30
-
-    monstera = Plant()
-    monstera.name = "Monstera"
-    monstera.height = 70
-    monstera.age = 120
-
-    cactus = Plant()
-    cactus.name = "cactus"
-    cactus.height = 15
-    cactus.age = 78
-
-    plants = [rose, monstera, cactus]
+    plant_info = [
+        ("Rose", 25, 30),
+        ("sunflower", 80, 45),
+        ("Cactus", 15, 120),
+    ]
+    plants = []
+    for info in plant_info:
+        plant = Plant()
+        plant.name = info[0]
+        plant.height = info[1]
+        plant.age = info[2]
+        plants += [plant]
 
     print("=== Garden Plant Registry ==")
     for plant in plants:

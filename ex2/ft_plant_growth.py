@@ -2,31 +2,36 @@
 
 
 class Plant:
-    def get_info(self):
+    name: str
+    height: int
+    original_height: int
+    p_age: int
+
+    def get_info(self) -> None:
         print(f"{self.name}: {self.height}cm, {self.p_age} days old")
 
-    def age(self, days: int):
+    def age(self) -> None:
         self.p_age += 1
 
-    def grow(self, days: int):
-        self.height += self.growth_factor * days
+    def grow(self) -> None:
+        self.height += 1
 
 
 if __name__ == "__main__":
     plant = Plant()
-    plant.name = "Monsera"
-    plant.height = 70
-    plant.p_age = 120
-    plant.growth_factor = 1.5
+    plant.name = "Rose"
+    plant.height = 25
+    plant.p_age = 30
+    plant.original_height = 25
 
-    start_height = plant.height
+    print("== Day 1 ==")
+    plant.get_info()
 
-    for day in range(1, 7 + 1):
-        print(f"== Day {day} ==")
-        plant.age(1)
-        plant.grow(1)
-        plant.get_info()
+    for days in range(6):
+        plant.age()
+        plant.grow()
 
-    end_height = plant.height
+    print("== Day 7 ==")
+    plant.get_info()
 
-    print(f"Growth this week: +{end_height - start_height}cm")
+    print(f"Growth this week: +{plant.height - plant.original_height}cm")

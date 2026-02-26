@@ -31,11 +31,12 @@ class Plant:
 
 class FloweringPlant(Plant):
     color: str
-    is_blooming: bool = False
+    is_blooming: bool
 
     def __init__(self, name: str, height: int, color: str):
         super().__init__(name, height)
         self.color = color
+        self.is_blooming = False
 
     def get_info(self):
         print(

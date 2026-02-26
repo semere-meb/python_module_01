@@ -2,13 +2,16 @@
 
 
 class SecurePlant:
-    def __init__(self, name: str, height: int, age: int, growth_factor: int):
+    name: str
+    height: int
+    p_age: int
+
+    def __init__(self, name: str, height: int, age: int) -> None:
         self.__name = name
         self.__height = height
         self.__age = age
-        self.__growth_factor = growth_factor
 
-    def get_info(self):
+    def get_info(self) -> None:
         print(f"{self.__name} ({self.__height}cm, {self.__age} days)")
 
     def get_name(self) -> str:
@@ -38,11 +41,13 @@ class SecurePlant:
 
 
 if __name__ == "__main__":
-    plant = SecurePlant("Monstera", 22, 120, 1.5)
+    plant = SecurePlant("Rose", 20, 25)
+
     print("=== Garden Security System ===")
     print(f"Plant created: {plant.get_name()}")
-    plant.set_age(220)
-    plant.set_height(34)
-    plant.set_height(-22)
-    print("Current plant: ", end="")
+    plant.set_height(25)
+    plant.set_age(30)
+    plant.set_height(-5)
+
+    print("\nCurrent plant: ", end="")
     plant.get_info()
